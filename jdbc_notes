@@ -1,0 +1,29 @@
+1. Add DBUtils in your utilities
+2. Add postgresql dependency
+     <dependency>
+        <groupId>org.postgresql</groupId>
+        <artifactId>postgresql</artifactId>
+        <version>42.2.8</version>
+    </dependency>
+
+3.Create a folder under feature : DatabaseFeatures
+4.Create your feature file: day23_read.feature
+5.Write your steps in the feature file
+================================
+Database testing is done for making sure database data is working as expected
+-Check if UI data exist in database
+-Check is the database tables have expected data.
+-For example, when user adds money to the bank account, then does is stored in the database
+-For example, when customer is created a user account, does is stored in the database
+-----
+Database is usually the most stable part of hte application
+And database should perform well so UI can work property
+For that reason database tesing is done.
+------
+Our database is postgresql database
+------
+
+
+
+
+

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="7" time="140.242">
+    <testcase classname="employee_login" name="login_with_employee_credentials" time="35.952">
+        <system-out>
+            <![CDATA[Given user is on the login page.............................................passed
+And user clicks on login dropdown...........................................passed
+And user clicks on sign in button...........................................passed
+And user sends username "gino.wintheiser"...................................passed
+And user sends password "%B6B*q1!TH"........................................passed
+And user clicks on the login button.........................................passed
+Then close the application..................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="employee_login" name="login_with_employee_credentials_2" time="29.855">
+        <system-out>
+            <![CDATA[Given user is on the login page.............................................passed
+And user clicks on login dropdown...........................................passed
+And user clicks on sign in button...........................................passed
+And user sends username "dallas.batz".......................................passed
+And user sends password "dOWjuXz8*es6"......................................passed
+And user clicks on the login button.........................................passed
+Then close the application..................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="employee_login" name="login_with_employee_credentials_3" time="20.833">
+        <system-out>
+            <![CDATA[Given user is on the login page.............................................passed
+And user clicks on login dropdown...........................................passed
+And user clicks on sign in button...........................................passed
+And user sends username "leonel.skiles".....................................passed
+And user sends password "x3uvY0f8hw1T"......................................passed
+And user clicks on the login button.........................................passed
+Then close the application..................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="money transfer feature" name="login_with_customer_credentials" time="16.707">
+        <system-out>
+            <![CDATA[Given user is on the login page.............................................passed
+And user clicks on login dropdown...........................................passed
+And user clicks on sign in button...........................................passed
+And user sends username "shaylee.lindgren"..................................passed
+And user sends password "mVSk$eq1YoZwq".....................................passed
+And user clicks on the login button.........................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="money transfer feature" name="user_should_make_money_transfer" time="5.781">
+        <system-out>
+            <![CDATA[Given user clicks on my operations..........................................passed
+And user clicks on transfer money...........................................passed
+When user select the current account to transfer money from.................passed
+And user select the other account to transfer money to......................passed
+When user provides the balance "3"..........................................passed
+And user types the description..............................................passed
+Then user makes the money transfer and verify success message...............passed
+Then close the application..................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="registration feature" name="user should be able to register" time="16.161">
+        <system-out>
+            <![CDATA[Given user is on the registration page......................................passed
+And user enters ssn number as "528-63-5687".................................passed
+And user enters firstname as "New User" and lastname as "last"..............passed
+And user provides address "Milky way".......................................passed
+And user provides phoneNumber "456-279-5588"................................passed
+And user provides username "utasatemoour"...................................passed
+And user provides email "kawaeeo123454@gmail.com"...........................passed
+And user provides the firstPassword as "Utilisateur123." and secondPassword as "Utilisateur123.".passed
+Then user clicks on the register button and see the success message as "Registration saved!".passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="admin login feature" name="login_with_employee_credentials" time="13.9">
+        <system-out>
+            <![CDATA[Given user is on the login page.............................................passed
+And user clicks on login dropdown...........................................passed
+And user clicks on sign in button...........................................passed
+And user enters admin_id and admin_password.................................passed
+And user clicks on the login button.........................................passed
+Then verify the login is successful.........................................passed
+Then capture the screenshot.................................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>

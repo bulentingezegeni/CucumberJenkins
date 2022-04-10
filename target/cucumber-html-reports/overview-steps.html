@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>cucumber-framework</td>
+        <td>1</td>
+      <td>10 Apr 2022, 13:03</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">stepdefinitions.GoogleStepDefs.close_the_application()</td>
+              <td>4</td>
+              <td class="duration" data-value="361609250">0.361</td>
+              <td class="duration" data-value="361609250">0.437</td>
+              <td class="duration" data-value="1446437000">1.446</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.LoginStepDefs.user_clicks_on_login_dropdown()</td>
+              <td>5</td>
+              <td class="duration" data-value="145760200">0.145</td>
+              <td class="duration" data-value="145760200">0.210</td>
+              <td class="duration" data-value="728801000">0.728</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.LoginStepDefs.user_clicks_on_sign_in_button()</td>
+              <td>5</td>
+              <td class="duration" data-value="299781800">0.299</td>
+              <td class="duration" data-value="299781800">0.382</td>
+              <td class="duration" data-value="1498909000">1.498</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.LoginStepDefs.user_clicks_on_the_login_button()</td>
+              <td>5</td>
+              <td class="duration" data-value="262246200">0.262</td>
+              <td class="duration" data-value="262246200">0.463</td>
+              <td class="duration" data-value="1311231000">1.311</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.LoginStepDefs.user_enters_admin_id_and_admin_password(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="300250000">0.300</td>
+              <td class="duration" data-value="300250000">0.300</td>
+              <td class="duration" data-value="300250000">0.300</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.LoginStepDefs.user_is_on_the_login_page()</td>
+              <td>5</td>
+              <td class="duration" data-value="21518925000">21.518</td>
+              <td class="duration" data-value="21518925000">33.436</td>
+              <td class="duration" data-value="107594625000">1:47.594</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.LoginStepDefs.user_sends_password(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="348498000">0.348</td>
+              <td class="duration" data-value="348498000">0.564</td>
+              <td class="duration" data-value="1393992000">1.393</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.LoginStepDefs.user_sends_username(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="288274000">0.288</td>
+              <td class="duration" data-value="288274000">0.388</td>
+              <td class="duration" data-value="1153096000">1.153</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.LoginStepDefs.verify_the_login_is_successful()</td>
+              <td>1</td>
+              <td class="duration" data-value="1064566000">1.064</td>
+              <td class="duration" data-value="1064566000">1.064</td>
+              <td class="duration" data-value="1064566000">1.064</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.MoneyTransferStepDefs.user_clicks_on_my_operations()</td>
+              <td>1</td>
+              <td class="duration" data-value="1093105000">1.093</td>
+              <td class="duration" data-value="1093105000">1.093</td>
+              <td class="duration" data-value="1093105000">1.093</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.MoneyTransferStepDefs.user_clicks_on_transfer_money()</td>
+              <td>1</td>
+              <td class="duration" data-value="116869000">0.116</td>
+              <td class="duration" data-value="116869000">0.116</td>
+              <td class="duration" data-value="116869000">0.116</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.MoneyTransferStepDefs.user_makes_the_money_transfer_and_verify_success_message()</td>
+              <td>1</td>
+              <td class="duration" data-value="1790542000">1.790</td>
+              <td class="duration" data-value="1790542000">1.790</td>
+              <td class="duration" data-value="1790542000">1.790</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.MoneyTransferStepDefs.user_provides_the_balance(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="531393000">0.531</td>
+              <td class="duration" data-value="531393000">0.531</td>
+              <td class="duration" data-value="531393000">0.531</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.MoneyTransferStepDefs.user_select_the_current_account_to_transfer_money_from()</td>
+              <td>1</td>
+              <td class="duration" data-value="1269608000">1.269</td>
+              <td class="duration" data-value="1269608000">1.269</td>
+              <td class="duration" data-value="1269608000">1.269</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.MoneyTransferStepDefs.user_select_the_other_account_to_transfer_money_to()</td>
+              <td>1</td>
+              <td class="duration" data-value="181504000">0.181</td>
+              <td class="duration" data-value="181504000">0.181</td>
+              <td class="duration" data-value="181504000">0.181</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.MoneyTransferStepDefs.user_types_the_description()</td>
+              <td>1</td>
+              <td class="duration" data-value="459467000">0.459</td>
+              <td class="duration" data-value="459467000">0.459</td>
+              <td class="duration" data-value="459467000">0.459</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.RegistrationStepDefs.user_clicks_on_the_register_button_and_see_the_success_message_as(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1284520000">1.284</td>
+              <td class="duration" data-value="1284520000">1.284</td>
+              <td class="duration" data-value="1284520000">1.284</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.RegistrationStepDefs.user_enters_firstname_as_and_lastname_as(java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1414079000">1.414</td>
+              <td class="duration" data-value="1414079000">1.414</td>
+              <td class="duration" data-value="1414079000">1.414</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.RegistrationStepDefs.user_enters_ssn_number_as(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="282293000">0.282</td>
+              <td class="duration" data-value="282293000">0.282</td>
+              <td class="duration" data-value="282293000">0.282</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.RegistrationStepDefs.user_is_on_the_registration_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="11601955000">11.601</td>
+              <td class="duration" data-value="11601955000">11.601</td>
+              <td class="duration" data-value="11601955000">11.601</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.RegistrationStepDefs.user_provides_address(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="209823000">0.209</td>
+              <td class="duration" data-value="209823000">0.209</td>
+              <td class="duration" data-value="209823000">0.209</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.RegistrationStepDefs.user_provides_email(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="342919000">0.342</td>
+              <td class="duration" data-value="342919000">0.342</td>
+              <td class="duration" data-value="342919000">0.342</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.RegistrationStepDefs.user_provides_phone_number(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="186107000">0.186</td>
+              <td class="duration" data-value="186107000">0.186</td>
+              <td class="duration" data-value="186107000">0.186</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.RegistrationStepDefs.user_provides_the_first_password_as_and_second_password_as(java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="615995000">0.615</td>
+              <td class="duration" data-value="615995000">0.615</td>
+              <td class="duration" data-value="615995000">0.615</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.RegistrationStepDefs.user_provides_username(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="205434000">0.205</td>
+              <td class="duration" data-value="205434000">0.205</td>
+              <td class="duration" data-value="205434000">0.205</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.ReusableStepDefs.capture_the_screenshot()</td>
+              <td>1</td>
+              <td class="duration" data-value="986879000">0.986</td>
+              <td class="duration" data-value="986879000">0.986</td>
+              <td class="duration" data-value="986879000">0.986</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>26</td>
+            <td>51</td>
+            <td class="duration">2.726</td>
+            <td class="duration">1:47.594</td>
+            <td class="duration">2:19.064</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
